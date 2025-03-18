@@ -12,9 +12,18 @@
     <div class="container p-4 my-4 border border-dark" id="app">
         <input class="input" type="text" v-model="todo">
         <button class="button" @click="saveTodo">Save</button>
-
-    {{todos}}
-
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Todo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="todo in todos" :key="todo">
+                    <td>{{ todo }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>    
     <script src="index.js"></script>     
 </body>
