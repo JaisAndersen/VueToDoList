@@ -10,25 +10,11 @@
 </head>
 <body>
     <div class="container p-4 my-4 border border-dark" id="app">
-        <input class="input" type="text" v-model="name">
-        <button class="button" @click="saveName">Save</button>
-        <button class="button" @click="showNames">Show</button>
-        <button class="button" @click="clearNames">Clear</button>   
-        <div v-if="showTable && names.length > 0">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="name in names" :key="name">
-                        <td>{{ name }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div v-else>{{ message }}</div>
+        <input class="input" type="text" v-model="todo">
+        <button class="button" @click="saveTodo">Save</button>
+
+    {{todos}}
+
     </div>    
     <script src="index.js"></script>     
 </body>
